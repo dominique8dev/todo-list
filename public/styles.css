@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    background-color: wheat;
+}
+
+.title{
+    padding: 20px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.addTask{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    margin: 10px 0;
+    gap: 10px;
+    width: 500px;
+}
+.addTask input{
+    width: 250px;
+    border: none;
+    padding: 12px 32px;
+}
+.addTask button{
+    border: none;
+    padding: 12px 32px;
+    background-color: #5d6cf5;
+    color: white;
+    cursor: pointer;
+}
+
+.taskList{
+    padding: 30px 50px;
+}
+.taskList li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+/* * overall list */
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    gap: 65px;
+    padding: 12px 32px;
+    border: 5px solid #5d6cf5;
+}
+
+
+/* *Checkbox */
+    #taskItem{
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    #taskItem input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    .mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    #taskItem:hover input ~ .mark {
+        background-color: #ccc;
+    }
+    #taskItem input:checked ~ .mark {
+        background-color: #12ff6d;
+    }
+    #taskItem:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    #taskItem .mark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+.completedSection{
+    width: 250px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+#editBtn{
+    background-color: #7fff00;
+    border: none;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+#deleteBtn{
+    background-color: #ff0000;
+    border: none;
+    padding: 12px 32px;
+    color: white;
+    cursor: pointer;
+}
+
+#cancelBtn{
+    background-color: #ff0000;
+    border: none;
+    padding: 12px 32px;
+    color: white;
+    cursor: pointer;
+}
+
+.editSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.editSection input{
+    border: none;
+    padding: 12px 32px;
+}
+#saveEditBtn{
+    background-color: #7fff00;
+    border: none;
+    padding: 12px 32px;
+    cursor: pointer;
+}
